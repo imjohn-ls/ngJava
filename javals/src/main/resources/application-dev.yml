@@ -1,0 +1,31 @@
+server:
+  port: 8020
+  session.timeout: 30
+
+pring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+datasource:
+  url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B8
+  driver-class-name: com.mysql.jdbc.Driver
+  username: imjohn
+  password: johnaddme9527
+  initial-size: 10
+  max-active: 20
+  max-idle: 8
+  min-idle: 8
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.imjohn.entity
+
+#showSql
+logging:
+  level:
+    com:
+      imjohn:
+        mapper: debug

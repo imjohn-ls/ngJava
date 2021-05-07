@@ -1,4 +1,4 @@
-package com.imjohn.demo;
+package com.imjohn;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
