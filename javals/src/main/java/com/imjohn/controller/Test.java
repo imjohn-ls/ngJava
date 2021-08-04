@@ -17,6 +17,7 @@ public class Test {
         return "hello";
     }
     @RequestMapping("/index")
+    @ResponseBody
     public String index(Model model) {
         model.addAttribute("name", "john");
         model.addAttribute("age", 20);

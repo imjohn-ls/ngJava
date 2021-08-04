@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imjohn.mapper.AticleMapper">
+     <resultMap id="BaseResultMap" type="com.imjohn.entity.Aticle">
+        <result column="aticleTitle" jdbcType="VARCHAR" property="aticleTitle"/>
+        <result column="writeDate" jdbcType="VARCHAR" property="writeDate"/>
+        <result column="aticleAuthor" jdbcType="VARCHAR" property="aticleAuthor"/>
+        <result column="aticleContent" jdbcType="VARCHAR" property="aticleContent"/>
+    </resultMap>
+    <insert id="AddAticle" parameterType="com.imjohn.entity.Aticle">
+        insert into Aticle(aticleTitle, writeDate, aticleAuthor, aticleContent) values (#{aticleTitle}, #{writeDate}, #{aticleAuthor}, #{aticleContent})
+    </insert>
+    <select id="GetAticle" resultType="map">
+        select * from Aticle where aticleAuthor = #{userName}
+    </select>
+</mapper>
